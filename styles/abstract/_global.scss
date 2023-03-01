@@ -1,0 +1,193 @@
+@import "../abstract/mixins";
+@import "../abstract/functions.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none !important;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+  @include devices(maxWidth) {
+    font-size: pxToVw(10) !important;
+  }
+}
+
+// scroll-behavior: auto;
+// overscroll-behavior: auto;
+// margin: 0;
+
+body {
+  overflow-y: hidden;
+  height: 100vh;
+
+  @media (min-width: 100px) and (max-width: 576px) {
+    overflow-y: auto;
+  }
+}
+
+// a {
+//   color: unset;
+//   &:hover {
+//     text-decoration: none;
+//     color: unset;
+//   }
+// }
+
+// pre {
+//   white-space: pre-wrap; /* css-3 */
+//   white-space: -moz-pre-wrap; /* Mozilla */
+//   white-space: -pre-wrap; /* Opera 4-6 */
+//   white-space: -o-pre-wrap; /* Opera 7 */
+//   word-wrap: break-word; /* Internet Explorer 5.5+ */
+// }
+
+button {
+  width: fit-content;
+  min-width: 80px;
+  letter-spacing: 0.33px;
+  border-radius: 3px;
+  font-family: $fontRegular;
+  font-size: 12px;
+  padding: 10px 30px;
+  text-align: center;
+  border: unset;
+  cursor: pointer;
+  @include tablet {
+    letter-spacing: 0.63px;
+    line-height: 22px;
+  }
+  &.btn-primary {
+    background-color: #e7704c;
+    color: rgba(255, 255, 255, 0.87);
+    transition: box-shadow 0.4s;
+    &:hover,
+    :active {
+      -webkit-box-shadow: 0px 1.48vh 26px -12px rgba(255, 153, 63, 1);
+      -moz-box-shadow: 0px 1.48vh 26px -12px rgba(255, 153, 63, 1);
+      box-shadow: 0px 1.48vh 26px -12px rgba(255, 153, 63, 1);
+    }
+  }
+  &.btn-secondary {
+    border: 1px solid rgba(255, 255, 255, 0.87);
+    color: rgba(255, 255, 255, 0.87);
+    background-color: transparent;
+    transition: 0.5s;
+    &:hover {
+      box-shadow: 0px 10px 10px #00000020;
+    }
+  }
+  &.completed {
+    background: linear-gradient(95deg, #8cdab0 1%, #21ce72 99%);
+    &:hover {
+      box-shadow: 0px 1.48vh 26px -12px #21ce72;
+    }
+  }
+  &.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+// .input-primary {
+//   @include height-width(38px, 100%);
+//   background-color: $white;
+//   border: 1px solid #dbdbdb;
+//   border-radius: 8px;
+//   font-family: $font1Regular;
+//   color: #0e0e2c;
+//   font-size: 17px;
+//   padding: 12px 16px;
+//   @include tablet {
+//     height: 48px;
+//   }
+//   .img-valid,
+//   .img-error {
+//     display: none;
+//   }
+//   &::placeholder {
+//     color: #8c8ca1;
+//   }
+//   &:focus {
+//     border: 1px solid #ff7701;
+//     box-shadow: 0px 0px 0px 4px rgba(234, 170, 112, 0.24);
+//     &::placeholder {
+//       color: #0e0e2c;
+//     }
+//   }
+//   &.valid {
+//     border: 1px solid #31d0aa;
+//     box-shadow: 0px 0px 0px 4px rgba(49, 208, 170, 0.2);
+//     .img-valid {
+//       display: block;
+//     }
+//   }
+//   &.error {
+//     border: 1px solid #ff7701;
+//     box-shadow: 0px 0px 0px 4px rgba(237, 75, 158, 0.2);
+//     .img-error {
+//       display: block;
+//     }
+//   }
+// }
+
+// input::-webkit-outer-spin-button,
+// input::-webkit-inner-spin-button {
+//   -webkit-appearance: none;
+//   margin: 0;
+// }
+
+// /* Firefox */
+// input[type="number"] {
+//   -moz-appearance: textfield;
+// }
+
+// //animations
+
+// @keyframes beat {
+//   0%,
+//   100% {
+//     transform: scale(1);
+//   }
+//   50% {
+//     transform: scale(1.1);
+//     -webkit-box-shadow: 0px 1.48vh 26px -12px rgb(255, 153, 63);
+//     -moz-box-shadow: 0px 1.48vh 26px -12px rgba(255, 153, 63, 1);
+//     box-shadow: 0px 1.48vh 26px -12px rgba(255, 153, 63, 1);
+//   }
+// }
+
+// .spinner-loader {
+//   border: 2px solid #f3f3f3; /* Light grey */
+//   border-top: 2px solid #3498db; /* Blue */
+//   border-radius: 50%;
+//   width: 40px;
+//   height: 40px;
+//   animation: spinner-anim 1s linear infinite;
+// }
+// @keyframes spinner-anim {
+//   0% {
+//     transform: rotate(0deg);
+//   }
+//   100% {
+//     transform: rotate(360deg);
+//   }
+// }
+// @-webkit-keyframes spinner-anim {
+//   0% {
+//     transform: rotate(0deg);
+//   }
+//   100% {
+//     transform: rotate(360deg);
+//   }
+// }
+// @keyframes pulse-animation {
+//   0% {
+//     box-shadow: 0 0 0 0px rgba(255, 153, 63, 1);
+//   }
+//   100% {
+//     box-shadow: 0 0 0 20px rgba(255, 153, 63, 0);
+//   }
+// }

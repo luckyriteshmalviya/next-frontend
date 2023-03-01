@@ -1,0 +1,21 @@
+.form-last-page {
+  color: white;
+  font-size: 2.2rem;
+
+  font-family: $fontJetBrainsMonoNormal;
+
+  .assessment-text {
+    color: #f0554e;
+    font-size: 1.5rem;
+    margin-top: 0.9rem;
+    font-family: $fontLight;
+
+    @include mobile {
+      font-size: 7rem;
+    }
+  }
+
+  @include mobile {
+    font-size: 7rem;
+  }
+}

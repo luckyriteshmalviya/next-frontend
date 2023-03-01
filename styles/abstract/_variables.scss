@@ -1,0 +1,46 @@
+// // BreakPoints
+$mobile: 576;
+$tablet: 767;
+$tablet-lg: 991;
+$laptop: 1200;
+$desktop: 1500;
+$desktop-lg: 1750;
+
+// //colors
+$color-primary: #fd755e;
+$color-primary-1: #fc5d73;
+$color-primary-2: #ff993f;
+$color-secondary: #2e2e2e;
+$color-secondary-1: #5046bb;
+$black: #000;
+$white: #fff;
+$color-1: #0e0e2c;
+$color-2: #838383;
+$color-mopid: rgba(255, 255, 255, 0.87);
+$color-background-mopid: #1e1e1e;
+
+// //fonts
+$font: "InterBold";
+$font1Bold: "AtkinsonBold";
+$font1Regular: "AtkinsonRegular";
+
+//new fonts
+$fontBold: "Inter-Bold";
+$fontRegular: "Inter-Normal";
+$fontLight: "Inter-Thin";
+$fontExtraLight: "Inter-ExtraLight";
+$fontInterLight: "Inter-Light";
+$fontMedium: "Inter-Medium";
+$fontSemi: "Inter-SemiBold";
+$fontJetBrainsMonoBold: "JetBrainsMono-Bold";
+$fontJetBrainsMonoNormal: "JetBrainsMono-Normal";
+$fontJetBrainsMonoThin: "JetBrainsMono-Thin";
+$fontPoppinsNormal: "Poppins-Normal";
+
+//global padding
+$desktop-padding: 150px;
+$mobile-top-padding: 25px;
+$mobile-bottom-padding: 30px;
+$mobile-left-right-padding: 25px;
+$mobile-padding: $mobile-top-padding $mobile-left-right-padding
+  $mobile-bottom-padding;

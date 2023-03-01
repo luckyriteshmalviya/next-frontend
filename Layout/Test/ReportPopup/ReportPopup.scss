@@ -1,0 +1,70 @@
+.report-popup-container {
+  @include flex-align-direction(center, column);
+  padding: 30px 20px;
+  width: 340px;
+  min-height: 420px;
+  background-color: $color-background-mopid;
+  @include tablet {
+    width: 90vw;
+    min-height: 380px;
+  }
+  .step1-container,
+  .step2-container {
+    @include flex-align-direction(center, column);
+    width: 100%;
+    flex: 1;
+    .report-icon-wrapper {
+      @include justify-align-direction(center, center, column);
+      @include height-width(103px, 103px);
+      border-radius: 50%;
+
+      margin-bottom: 20px;
+      img {
+        @include height-width(42px, auto);
+      }
+    }
+    .report-heading {
+      font-size: 20px;
+      font-family: $fontBold;
+      color: #fc5d73;
+      margin-bottom: 20px;
+    }
+    .report-description {
+      @include font-secondary-bold(18px);
+      line-height: 28px;
+      text-align: center;
+      margin-bottom: 30px;
+      @include tablet {
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+    .button-wrapper {
+      @include flex-direction(row);
+      width: 100%;
+      margin-top: auto;
+      .btn-secondary {
+        margin-left: auto;
+        @include tablet {
+          padding: 10px 10px;
+        }
+      }
+      .btn-primary {
+        margin: auto;
+      }
+    }
+  }
+
+  .step2-container {
+    .report-icon-wrapper {
+      @include height-width(auto, auto);
+
+      img {
+        @include height-width(103px, auto);
+      }
+    }
+    .report-heading {
+      color: #48bf84;
+    }
+  }
+}

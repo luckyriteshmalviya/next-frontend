@@ -1,0 +1,46 @@
+.button-option {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 5rem;
+}
+
+@keyframes smmothAnimation {
+  0% {
+    opacity: 0%;
+  }
+
+  100% {
+    opacity: 100%;
+  }
+}
+
+.active {
+  margin-top: -8rem;
+}
+
+.salary-detail {
+  margin-top: 2rem;
+  transition: all 2s ease-in-out;
+
+  @include mobile {
+    margin-top: 12rem;
+  }
+
+  .salary-container {
+    display: flex;
+    gap: 2rem;
+  }
+
+  &.hide {
+    display: none;
+    transition: all 2s ease-in;
+  }
+
+  &.show {
+    display: block;
+  }
+}
+
+.error-focus {
+  border: 1px solid red;
+}

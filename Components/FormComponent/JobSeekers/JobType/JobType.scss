@@ -1,0 +1,22 @@
+// .bottom-height {
+//   // margin-bottom: 17.7rem;
+// }
+
+.jobtype {
+  margin-bottom: 20rem;
+}
+.internship {
+  width: 15.1rem;
+  @include mobile {
+    width: inherit;
+    height: fit-content;
+  }
+}
+
+.fulltime {
+  width: 20rem;
+  @include mobile {
+    width: inherit;
+    height: fit-content;
+  }
+}

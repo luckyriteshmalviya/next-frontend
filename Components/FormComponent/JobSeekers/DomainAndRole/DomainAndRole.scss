@@ -1,0 +1,13 @@
+.domain-role-wrapper {
+  .domain-container {
+    margin-bottom: 3rem;
+    @include mobile {
+      margin-bottom: 12rem;
+    }
+  }
+
+  .domain-options {
+    width: 40rem;
+    height: 3rem;
+  }
+}

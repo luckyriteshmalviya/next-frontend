@@ -1,0 +1,4 @@
+export const SETAUTHTOKEN = "SETAUTHTOKEN";
+export const SETDEVICEINFO = "SETDEVICEINFO";
+export const SETUSERINFO = "SETUSERINFO";
+export const LOGOUT = "LOGOUT";

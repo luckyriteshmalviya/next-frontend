@@ -1,0 +1,58 @@
+.phone-number-parent-wrapper {
+  font-family: $fontJetBrainsMonoNormal;
+  .phone-number-parent {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .otp-parent {
+    margin-top: 3rem;
+    @include flex-align-direction(flex-end, row);
+    gap: 3rem;
+
+    @include mobile {
+      margin-top: 12rem;
+    }
+    .otp-image {
+      width: 5rem;
+      height: 3.5rem;
+      @include mobile {
+        width: 15rem;
+        height: 12rem;
+      }
+      img {
+        width: 80%;
+        height: 80%;
+      }
+    }
+  }
+  .otp-message {
+    color: #00cb75;
+    font-size: 2rem;
+    font-family: $fontLight;
+    font-style: italic;
+    @include mobile {
+      font-size: 5rem;
+      padding-left: 4rem;
+    }
+  }
+  .number-warning {
+    color: #f0554e;
+    font-size: 1.4rem;
+    font-family: $fontLight;
+    font-style: italic;
+    padding-left: 0.7rem;
+
+    @include mobile {
+      font-size: 5rem;
+    }
+    &.hide {
+      visibility: hidden;
+    }
+
+    &.show {
+      display: block;
+      transition: display 5s ease-in-out;
+    }
+  }
+}

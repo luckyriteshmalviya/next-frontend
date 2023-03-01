@@ -1,0 +1,189 @@
+.navbar-container {
+  @include flex-align-direction(center, row);
+  @include height-width(100px, 100%);
+  position: relative;
+  transition: 0.8s;
+
+  @include tablet {
+    height: fit-content;
+  }
+
+  .navbarcontent-wrapper {
+    @include justify-align-direction(flex-end, center, row);
+    width: 100%;
+
+    &:last-child {
+      display: none;
+    }
+
+    @include tablet {
+      justify-content: space-between;
+      margin: 10px 0px;
+      padding: 0px 15px;
+    }
+
+    .desktop-title-wrapper {
+      @include flex-align-direction(center, row);
+      margin-right: auto;
+      width: 90%;
+
+      @include tablet {
+        width: 100%;
+
+        .tooltip-container {
+          border-radius: 3px;
+
+          .tooltip-text {
+            font-size: 12px;
+          }
+        }
+      }
+
+      .title-contain {
+        flex: 1;
+        @include flex-align(center);
+
+        h2 {
+          @include font-secondary-bold(24px);
+          margin-right: 13px;
+          color: $color-secondary;
+          font-size: 24px;
+          font-family: $fontBold;
+        }
+      }
+
+      .nav-button {
+        font-size: 12px;
+        font-family: $fontBold;
+        color: #ff993f;
+        letter-spacing: 0.33px;
+        padding: 7px 10px;
+        background-color: rgba(255, 153, 63, 0.1);
+        border-radius: 8px;
+        cursor: pointer;
+
+        @include tablet {
+          margin-left: auto;
+        }
+      }
+
+      &.side-bar1 {
+        width: calc(100% - 380px);
+      }
+
+      transition: 0.4s;
+    }
+
+    .title-wrapper {
+      @include flex-align-direction(center, row);
+      margin-right: auto;
+
+      img {
+        cursor: pointer;
+        transition: transform 0.4s;
+
+        &:hover {
+          animation: backarrow 0.8s infinite;
+        }
+      }
+
+      .text-wrapper {
+        margin-left: 20px;
+
+        @include tablet {
+          max-width: 270px;
+        }
+
+        .nav-title {
+          font-size: 24px;
+          font-family: $fontRegular;
+          letter-spacing: 0.8px;
+          margin: 0px;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          overflow: hidden;
+          width: 500px;
+          color: #fff;
+          opacity: 0.8;
+
+          @include tablet {
+            width: 100%;
+          }
+
+          @include mobile {
+            font-size: 18px;
+          }
+        }
+      }
+    }
+
+    .viewall-wrapper {
+      display: none;
+
+      @include tablet {
+        display: block;
+        border-bottom: 1px solid #48bf84;
+      }
+
+      p {
+        font-size: 12px;
+        font-family: $fontRegular;
+        color: #48bf84;
+      }
+    }
+
+    .logout-wrapper {
+      display: none;
+
+      @include tablet {
+        display: block;
+      }
+
+      p {
+        @include font-secondary-bold(16px);
+      }
+    }
+  }
+
+  &.inner-desktop {
+    .navbarcontent-wrapper {
+      display: none;
+
+      &:last-child {
+        display: flex;
+      }
+    }
+  }
+
+  &.inner-mobile {
+    .navbarcontent-wrapper {
+      @include tablet {
+        display: none;
+
+        &:last-child {
+          display: flex;
+        }
+      }
+    }
+  }
+
+  &.header-button {
+    .coin-info {
+      @include tablet {
+        display: none;
+      }
+    }
+  }
+}
+
+@keyframes backarrow {
+
+  0%,
+  100% {
+    transform: translateX(0px);
+  }
+
+  50% {
+    transform: translateX(-10px);
+  }
+}

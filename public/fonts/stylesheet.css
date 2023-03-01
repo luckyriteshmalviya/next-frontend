@@ -1,0 +1,55 @@
+@font-face {
+  font-family: "Inter-Normal";
+  src: url("Inter-Medium.ttf");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter-Thin";
+  src: url("Inter-Light.ttf");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter-Bold";
+  src: url("Inter-Bold.ttf");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "JetBrainsMono-Bold";
+  src: url("JetBrainsMono-ExtraBold.ttf");
+  font-weight: bolder;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "JetBrainsMono-Thin";
+  src: url("JetBrainsMono-Thin.ttf");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "JetBrainsMono-Normal";
+  src: url("JetBrainsMono-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins-Normal";
+  src: url("Poppins-Light.ttf");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}

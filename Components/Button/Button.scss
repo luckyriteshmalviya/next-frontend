@@ -1,0 +1,81 @@
+.button {
+  border-radius: 0.2rem;
+  min-width: 7rem;
+  padding: 0.8rem 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-family: $fontRegular;
+  border: none;
+  user-select: none;
+  font-size: 2.3rem;
+
+  @include mobile {
+    border-radius: 1.5rem;
+    padding: 2.5rem 6rem;
+    font-size: 6rem;
+  }
+  &:hover {
+    z-index: 3;
+  }
+}
+.prev {
+  font-family: $fontLight;
+  background-color: #4a4948;
+  color: #1e1e1e;
+  width: fit-content;
+  font-weight: 100;
+  transition: box-shadow 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+    z-index: 5;
+    // box-shadow: 3px 3px rgba(255, 255, 255, 0.4);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+  }
+}
+.next {
+  background-color: #e7704c;
+  font-family: $fontBold;
+  color: #1e1e1e;
+  width: fit-content;
+  transition: box-shadow 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+  &:hover {
+    background-color: #ed947a;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+  }
+}
+.get-otp,
+.upload-resume {
+  // font-size: 2.3rem;
+  background-color: #e7704c;
+  font-family: $fontBold;
+
+  color: #1e1e1e;
+  width: fit-content;
+  transition: box-shadow 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+  margin-left: 1rem;
+  &:hover {
+    background-color: #ed947a;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+    transform: scale(1.04);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  @include mobile {
+    padding: 3.1rem 3rem;
+    font-size: 4.4rem;
+    margin-left: -12rem;
+  }
+}
+
+.button-component-parent {
+  display: flex;
+  .select-button {
+    margin-right: 0.625rem;
+  }
+}

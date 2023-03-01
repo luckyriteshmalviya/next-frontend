@@ -1,0 +1,43 @@
+.trial-confirmation-container {
+  @include height-width(fit-content, 343px);
+  @include justify-align-direction(space-between, center, column);
+  background-color: #1e1e1e;
+  padding: 30px;
+  border-radius: 13px;
+  @include tablet {
+    padding: 30px;
+    width: 254px;
+    height: fit-content;
+  }
+  .popup-confirm-title {
+    font-family: $fontJetBrainsMonoNormal;
+    margin-bottom: 30px;
+    color: #fff;
+    font-size: 16px !important;
+    line-height: 30px;
+    @include tablet {
+      margin-bottom: 22px;
+      font-size: 15px !important;
+      line-height: 20px;
+    }
+  }
+  .bottom-section {
+    @include flex-justify-direction(center, row);
+    gap: 10px;
+    width: 100%;
+    font-size: 40px;
+    .btn-secondary {
+      color: #4a4948;
+      opacity: 0.2;
+      background-color: #faf7ef;
+      border: none;
+      transition: 0.5s;
+      &:hover {
+        box-shadow: 0px 10px 10px #00000020;
+      }
+    }
+    @include tablet {
+      width: fit-content;
+    }
+  }
+}

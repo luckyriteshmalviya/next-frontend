@@ -1,0 +1,38 @@
+.modeOfAvailability {
+  margin-bottom: 2rem;
+}
+
+.cityName {
+  margin: 2rem 0rem 0rem;
+  &.hide {
+    visibility: hidden;
+  }
+
+  &.show {
+    display: block;
+    // transition: display 5s;
+  }
+
+  @include mobile {
+    margin-top: 15rem;
+  }
+}
+
+.work-from-home {
+  @include mobile {
+    width: inherit;
+  }
+}
+
+.office {
+  width: 12.7rem;
+  @include mobile {
+    width: inherit;
+  }
+}
+.location-width {
+  width: 40rem !important;
+  @include mobile {
+    width: 100rem !important;
+  }
+}

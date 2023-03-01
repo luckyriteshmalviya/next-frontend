@@ -1,0 +1,164 @@
+.custom-field {
+  display: flex;
+  flex-direction: column;
+  font-family: $fontJetBrainsMonoNormal;
+  input:-internal-autofill-selected {
+    background-color: #4a4948;
+  }
+
+  .form-input {
+    width: 68.7rem;
+    display: flex;
+    padding-top: 0.5rem;
+    padding-left: 1.5rem;
+    height: 4.3rem;
+    background-color: #4a4948;
+    border: none;
+    border-radius: 0.2rem;
+    color: #fff;
+    font-family: $fontLight;
+    font-size: 1.9rem;
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    &::placeholder {
+      font-size: 2.1rem;
+      font-family: $fontLight;
+      word-spacing: 0.3rem !important;
+      letter-spacing: 0.1rem;
+      opacity: 0.8;
+      @include mobile {
+        font-size: 5rem;
+      }
+    }
+
+    @include mobile {
+      font-size: 7rem;
+      padding-bottom: 2rem;
+      height: 12rem;
+      border-radius: 1.5rem;
+      width: 120rem;
+    }
+  }
+
+  .short-input {
+    width: 58rem;
+
+    @include mobile {
+      width: 98rem;
+    }
+    &::before {
+      display: none;
+    }
+  }
+
+  .salary {
+    width: 7rem;
+    padding-left: 1.7rem;
+    @include mobile {
+      width: 15rem;
+      padding-left: 3.2rem;
+      padding-bottom: 1.7rem;
+    }
+
+    &::placeholder {
+      color: white;
+    }
+  }
+  .salary-two {
+    width: 21rem;
+    @include mobile {
+      width: 67rem;
+    }
+
+    // &::placeholder {
+    //   color: white;
+    // }
+  }
+
+  .salary-label {
+    margin-bottom: 0 !important;
+  }
+
+  .label {
+    font-size: 2rem;
+    letter-spacing: 0.1rem;
+    color: #fff;
+    width: 100%;
+    margin-bottom: 4.4rem;
+    @include mobile {
+      font-size: 8rem;
+      padding-top: 0.5rem;
+      padding-left: 1.5rem;
+      border-radius: 0.2rem;
+      margin-bottom: 12rem;
+    }
+  }
+  .form-number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2rem;
+    height: 2rem;
+    font-size: 1rem;
+    background-color: #fff;
+    color: black;
+    border-radius: 50%;
+    margin-right: 2rem;
+  }
+
+  // font-family: $fontJetBrainsMonoThin;
+
+  .input-error {
+    border: 2px solid #f0554e;
+  }
+
+  .form-warning {
+    color: #f0554e;
+    font-size: 1.4rem;
+    font-family: $fontLight;
+    font-style: italic;
+    padding-left: 0.7rem;
+
+    @include mobile {
+      font-size: 5rem;
+    }
+    &.hide {
+      visibility: hidden;
+    }
+
+    &.show {
+      display: block;
+      transition: display 5s ease-in-out;
+    }
+  }
+}
+.upload-message {
+  margin-top: 0.5rem;
+  color: #00cb75;
+  font-style: italic;
+  font-size: 2rem;
+  font-family: $fontLight;
+  @include mobile {
+    font-size: 5rem;
+  }
+}
+
+.upload-error-message {
+  @extend .upload-message;
+  color: red;
+}
+.upload-initial-message {
+  @extend .upload-message;
+  color: rgb(77, 77, 77);
+}
+
+.custom-form-top {
+  padding-top: min(28rem, 27vh);
+  @include mobile {
+    padding-top: 80rem;
+  }
+}

@@ -1,0 +1,55 @@
+.resume-parent {
+  display: flex;
+  align-items: end;
+  .file {
+    opacity: 0;
+    width: 0.1px;
+    height: 0.1px;
+    position: absolute;
+  }
+
+  label {
+    display: block;
+    position: relative;
+    padding: 0.5rem 0 0.5rem 0.5rem;
+    height: 4.3rem;
+    background-color: #4a4948;
+    border: none;
+    border-radius: 0.2rem;
+    color: #fff;
+    font-family: $fontJetBrainsMonoNormal;
+    font-size: 1.9rem;
+    width: 58rem;
+    display: flex;
+    justify-content: space-between;
+    overflow-x: scroll;
+
+    @include mobile {
+      width: 98rem;
+      height: 11rem;
+      font-size: 3.6rem;
+    }
+    &::before {
+      display: none;
+    }
+  }
+  .delete-resume {
+    width: 4rem;
+    cursor: pointer;
+    img {
+      height: 100%;
+
+      padding-right: 1rem;
+    }
+    @include mobile {
+      width: auto;
+    }
+  }
+
+  .upload-resume {
+    margin-left: 1.8rem;
+    @include mobile {
+      margin-left: 2rem;
+    }
+  }
+}

@@ -1,0 +1,33 @@
+@import "./abstract/variables";
+@import "./abstract/mixins";
+@import "./abstract/global";
+
+// Components
+@import "../Components/Footer/FooterForGetHired.scss";
+@import "../Components/Footer/FooterForHire.scss";
+@import "../Components/Header/Header.scss";
+@import "../Components/Button/Button.scss";
+@import "../Components/FormComponent/CustomSelect/CustomField.scss";
+@import "../Components/FormComponent/JobSeekers/Availability/Availability.scss";
+@import "../Components/FormComponent/JobSeekers/CurrentStatus/CurrentStatus.scss";
+@import "../Components/FormComponent/JobSeekers/DomainAndRole/DomainAndRole.scss";
+@import "../Components/FormComponent/JobSeekers/Experience/Experience.scss";
+@import "../Components/FormComponent/JobSeekers/FormLastPage/FormLastPage.scss";
+@import "../Components/FormComponent/JobSeekers/ModeOfAvailability/ModeOfAvailability.scss";
+@import "../Components/FormComponent/JobSeekers/PhoneNumberInput/PhoneNumberInput.scss";
+@import "../Components/FormComponent/JobSeekers/ResumeInput/ResumeInput.scss";
+@import "../Components/FormComponent/JobSeekers/JobType/JobType.scss";
+@import "../Components/Popup/Popup.scss";
+@import "../Components/Popup/Confirmation/Confirmation.scss";
+@import "../Components/Navbar/Navbar.scss";
+
+//Pages
+@import "../Layout/HomePage/HomePage.scss";
+@import "../Layout/Forms/jobSeekers.scss";
+@import "../Layout/QuizInstructions/QuizInstructions.scss";
+@import "../Layout/Test/Test.scss";
+@import "../Layout/Test/OverviewCard/OverviewCard.scss";
+@import "../Layout/Test/QuestionContainer/QuestionContainer.scss";
+@import "../Layout/Test/ConfirmationPopup/ConfirmationPopup.scss";
+@import "../Layout/Test/ReportPopup/ReportPopup.scss";
+@import "../Layout/Test/ResultCard/ResultCard.scss";

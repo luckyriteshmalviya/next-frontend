@@ -1,0 +1,92 @@
+.question-wrapper {
+  margin-bottom: 25px;
+  .question {
+    @include font-secondary-bold(16px);
+    font-family: $fontLight;
+    line-height: 1.4;
+    @include tablet {
+      font-size: 14px;
+    }
+  }
+  .question-equation {
+    @include font-secondary-bold(18px);
+    margin: 20px auto 0px;
+    width: fit-content;
+    @include tablet {
+      font-size: 14px;
+    }
+  }
+  .question-img {
+    @include flex-align-direction(center, column);
+    width: 100%;
+    margin-top: 25px;
+    img {
+      width: 100%;
+      max-height: 209px;
+      object-fit: contain;
+      @include tablet {
+        max-height: unset;
+      }
+    }
+  }
+  .match-the-following {
+    @include flex-justify-direction(space-between, row);
+    margin-top: 25px;
+    .row {
+      @include flex-direction(column);
+      max-width: 40%;
+      @include tablet {
+        max-width: 45%;
+      }
+      .element {
+        @include font-secondary-bold(18px);
+        margin-bottom: 12px;
+        @include tablet {
+          font-size: 14px;
+          margin-bottom: 8px;
+        }
+        &.head {
+          -webkit-text-stroke-width: 0.5px;
+          -webkit-text-stroke-color: $color-secondary;
+          margin-bottom: 30px;
+          @include tablet {
+            margin-bottom: 15px;
+          }
+        }
+      }
+    }
+  }
+  .tablet-container {
+    @include flex-direction(column);
+    width: 100%;
+    overflow-x: scroll;
+    margin-top: 34px;
+    &::-webkit-scrollbar {
+      background-color: transparent;
+      border-radius: 30px;
+      height: 5px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: rgba(46, 46, 46, 0.4);
+      border-radius: 30px;
+      height: 5px;
+      //margin-top: 10px;
+    }
+    .column {
+      @include flex-direction(row);
+      width: fit-content;
+      .child {
+        width: 120px;
+        padding: 13px 10px;
+        font-family: $fontRegular;
+        font-size: 12px;
+        color: $color-secondary;
+        border: 1px solid $color-secondary;
+        &.head {
+          background-color: #b7b7b7;
+          color: $white;
+        }
+      }
+    }
+  }
+}

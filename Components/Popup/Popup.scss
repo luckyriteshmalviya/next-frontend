@@ -1,0 +1,61 @@
+.popup-container {
+  @include justify-align-direction(center, center, column);
+  min-height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 5;
+  background-color: rgba(0, 0, 0, 0.4);
+  visibility: visible;
+  .popup {
+    @include height-width(fit-content, fit-content);
+    background-color: $white;
+    border-radius: 30px;
+    position: relative;
+    transition: transform 0.4s;
+    transform: translateY(0px);
+    .close {
+      @include height-width(20px, 20px);
+      position: absolute;
+      right: 1.8vw;
+      top: 2.38vh;
+      opacity: 1;
+      @include tablet {
+        height: 15px;
+        width: 15px;
+        top: 30px;
+        right: 15px;
+      }
+    }
+    .popup-title {
+      font-size: 32px;
+      font-family: $fontBold;
+      color: $color-secondary;
+      text-align: center;
+      @include tablet {
+        font-size: 26px;
+      }
+    }
+    &.bottom {
+      @include tablet {
+        margin-top: auto;
+        border-radius: 0px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+      }
+    }
+    &.center {
+      @include tablet {
+        border-radius: 15px;
+      }
+    }
+  }
+  &.hide {
+    visibility: hidden;
+    .popup {
+      transform: translateY(100px);
+    }
+  }
+}

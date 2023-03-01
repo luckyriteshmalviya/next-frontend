@@ -1,0 +1,86 @@
+.resultcard-container_result {
+  background-color: #1e1e1e;
+  @include height-width(auto, 549px);
+  border-radius: 13px;
+  @include flex-align-direction(center, column);
+  padding: 65px 69px;
+  width: fit-content;
+  @include tablet {
+    height: 100vh;
+    width: 100vw;
+    padding: 110px 15px 50px;
+    overflow: scroll;
+  }
+  .card-title_result {
+    font-size: 40px;
+    font-family: $fontBold;
+    color: #fd755e;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 15px;
+    // @include tablet {
+    //   display: none;
+    // }
+  }
+
+  .result-decription-container {
+    margin-top: 68px;
+    color: white;
+    font-size: 20px;
+    font-family: $fontLight;
+    width: 300px;
+    text-align: center;
+
+    .result-description-second {
+      margin-top: 32px;
+    }
+  }
+
+  .button-container {
+    @include justify-align-direction(space-between, center, row);
+    width: 100%;
+    margin-top: 78px;
+    .btn-secondary,
+    .btn-primary {
+      width: 47%;
+      font-size: 14px;
+      white-space: nowrap;
+      padding: 14px 0px;
+    }
+    &.desktop {
+      @include tablet {
+        display: none;
+      }
+    }
+  }
+
+  .mobile-buttons {
+    @include justify-align-direction(center, center, row);
+    // display: none;
+    margin-top: 73px;
+    width: 178px;
+    height: 53px;
+    @include tablet {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+    }
+    .btn-primary {
+      flex: 1;
+      padding: 0px;
+      font-size: 18px;
+      margin-bottom: 24px;
+      margin-left: 7px;
+      height: 51px;
+      background-color: #e7704c;
+    }
+    .btn-secondary {
+      flex: 1;
+      padding: 0px;
+      font-size: 18px;
+      margin-bottom: 24px;
+      margin-right: 7px;
+      height: 51px;
+    }
+  }
+}

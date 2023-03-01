@@ -1,0 +1,33 @@
+.availability {
+  margin-bottom: 2rem;
+  .customized-input-availibility {
+    width: 25.3rem;
+    @include mobile {
+      width: 75rem;
+    }
+  }
+  .availability-button {
+    display: flex;
+    gap: 2rem;
+    @include mobile {
+      gap: 5rem;
+    }
+  }
+
+  .availability-status-no {
+    margin: 2rem 0rem 0rem;
+
+    &.hide {
+      visibility: hidden;
+    }
+
+    &.show {
+      display: block;
+      // transition: display 5s;
+    }
+    @include mobile {
+      margin-left: -2rem;
+      padding-top: 10rem;
+    }
+  }
+}

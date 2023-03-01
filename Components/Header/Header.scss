@@ -1,0 +1,78 @@
+.header {
+  padding: resConverter(1.8) resConverter(8);
+
+  @include mobile {
+    padding: 3rem 6rem;
+  }
+
+  .header-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .mopid-logo {
+      height: resConverter(1.8);
+
+      @include mobile {
+        height: 6rem;
+      }
+    }
+
+    .header-button-area {
+      // max-width: resConverter(13);
+      height: resConverter(3);
+      border: 0.6px solid #a1a1aa;
+      border-radius: 10px;
+      padding: resConverter(0.3) resConverter(0.3);
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+
+      @include mobile {
+        height: 10rem;
+        font-size: 3rem;
+        border-radius: 5px;
+        padding: 0.5rem 0.5rem;
+      }
+
+      @keyframes homeAnime {
+        0% {
+          opacity: 0;
+        }
+
+        100% {
+          opacity: 1;
+        }
+      }
+
+      .header-button-unselected {
+        display: flex;
+        align-items: center;
+        padding: 0 resConverter(1.4375);
+        font-family: $fontLight;
+        font-weight: 0;
+        font-size: resConverter(0.75);
+        // animation: homeAnime 5s initial;
+        @include mobile {
+          // padding: 0 resConverter(0.7);
+          font-size: 3rem;
+        }
+      }
+      .header-button-selected {
+        background-color: #18181b;
+        color: #ffffff;
+        border-radius: 5px;
+        padding: resConverter(0.625) resConverter(1.3125);
+        display: flex;
+        align-items: center;
+        font-family: $fontRegular;
+        font-size: resConverter(0.75);
+        animation: homeAnime 2s linear;
+        @include mobile {
+          // padding: 0 resConverter(0.3);
+          font-size: 3rem;
+        }
+      }
+    }
+  }
+}
